@@ -11,7 +11,7 @@ use Gedmo\Timestampable\Traits\TimestampableEntity;
 class VinylMix
 {
     use TimestampableEntity;
-
+    
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
@@ -28,8 +28,6 @@ class VinylMix
 
     #[ORM\Column(length: 255)]
     private ?string $genre = null;
-
- 
 
     #[ORM\Column]
     private int $votes = 0;
