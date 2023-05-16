@@ -4,6 +4,7 @@ namespace App\DataFixtures;
 
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use App\Factory\VinylMixFactory;
 
 class AppFixtures extends Fixture
 {
@@ -11,6 +12,7 @@ class AppFixtures extends Fixture
     {
         // $product = new Product();
         // $manager->persist($product);
+        VinylMixFactory::createMany(25);
         $manager->flush();
     }
 }
